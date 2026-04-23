@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<data>
+    <xpath expr="/form/field[@name='work']" position="after">
+        <label name="shift"/>
+        <field name="shift"/>
+    </xpath>
+</data>
