@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="shift_record_view_list">
+            <field name="model">production.work.shift.record</field>
+            <field name="type">tree</field>
+            <field name="name">shift_record_list</field>
+        </record>
+        <record model="ir.ui.view" id="shift_record_view_form">
+            <field name="model">production.work.shift.record</field>
+            <field name="type">form</field>
+            <field name="name">shift_record_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_shift_record">
+            <field name="name">Shift Records</field>
+            <field name="res_model">production.work.shift.record</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_shift_record_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="shift_record_view_list"/>
+            <field name="act_window" ref="act_shift_record"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_shift_record_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="shift_record_view_form"/>
+            <field name="act_window" ref="act_shift_record"/>
+        </record>
+        <menuitem
+            parent="production.menu_production"
+            action="act_shift_record"
+            sequence="30"
+            id="menu_shift_record"/>
+
+        <record model="ir.model.access" id="access_shift_record">
+            <field name="model">production.work.shift.record</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_shift_record_group_production">
+            <field name="model">production.work.shift.record</field>
+            <field name="group" ref="production.group_production"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <record model="ir.rule.group" id="rule_group_shift_record_companies">
+            <field name="name">User in companies</field>
+            <field name="model">production.work.shift.record</field>
+            <field name="global_p" eval="True"/>
+        </record>
+        <record model="ir.rule" id="rule_shift_record_companies">
+            <field name="domain"
+                eval="[('company', 'in', Eval('companies', []))]"
+                pyson="1"/>
+            <field name="rule_group" ref="rule_group_shift_record_companies"/>
+        </record>
+    </data>
+</tryton>
