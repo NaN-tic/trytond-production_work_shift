@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<form>
+    <label name="work"/>
+    <field name="work"/>
+    <label name="production"/>
+    <field name="production"/>
+    <label name="workplace"/>
+    <field name="workplace"/>
+    <label name="date"/>
+    <field name="date"/>
+    <label name="shift"/>
+    <field name="shift"/>
+    <label name="user"/>
+    <field name="user"/>
+    <label name="line"/>
+    <field name="line"/>
+    <label name="operation"/>
+    <field name="operation"/>
+    <label name="state"/>
+    <field name="state"/>
+</form>

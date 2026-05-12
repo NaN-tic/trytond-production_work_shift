@@ -8,5 +8,6 @@ from . import work
 
 def register():
     Pool.register(
+        work.WorkShiftRecord,
         work.WorkCycle,
         module='production_work_shift', type_='model')

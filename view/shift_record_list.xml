@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="work"/>
+    <field name="production"/>
+    <field name="workplace"/>
+    <field name="date"/>
+    <field name="shift"/>
+    <field name="user"/>
+    <field name="line"/>
+    <field name="operation"/>
+    <field name="state"/>
+</tree>
