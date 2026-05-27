@@ -18,4 +18,5 @@
     <field name="operation"/>
     <label name="state"/>
     <field name="state"/>
+    <field name="cycles" colspan="4"/>
 </form>
