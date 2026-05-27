@@ -26,9 +26,12 @@ class WorkShiftRecord(ModelSQL, ModelView):
         'working.shift.definition', 'Shift', required=True, readonly=True)
     user = employee_field('User')
     line = fields.Many2One(
-        'production.work.center', 'Line', required=True, readonly=True)
+        'production.work.center', 'Line', required=False, readonly=True)
     operation = fields.Many2One(
         'production.routing.operation', 'Operation',
+        readonly=True)
+    cycles = fields.One2Many(
+        'production.work.cycle', 'shift_record', 'Cycles',
         readonly=True)
     state = fields.Selection([
             ('active', 'Active'),
