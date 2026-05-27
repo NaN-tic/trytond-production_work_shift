@@ -5,3 +5,75 @@ msgstr "Content-Type: text/plain; charset=utf-8\n"
 msgctxt "field:production.work.cycle,shift:"
 msgid "Shift"
 msgstr "Turno"
+
+msgctxt "field:production.work.cycle,shift_record:"
+msgid "Shift Record"
+msgstr "Registro de turno"
+
+msgctxt "field:production.work.shift.record,company:"
+msgid "Company"
+msgstr "Empresa"
+
+msgctxt "field:production.work.shift.record,cycles:"
+msgid "Cycles"
+msgstr "Ciclos"
+
+msgctxt "field:production.work.shift.record,date:"
+msgid "Date"
+msgstr "Fecha"
+
+msgctxt "field:production.work.shift.record,line:"
+msgid "Line"
+msgstr "Línea"
+
+msgctxt "field:production.work.shift.record,operation:"
+msgid "Operation"
+msgstr "Operación"
+
+msgctxt "field:production.work.shift.record,production:"
+msgid "Production"
+msgstr "Producción"
+
+msgctxt "field:production.work.shift.record,shift:"
+msgid "Shift"
+msgstr "Turno"
+
+msgctxt "field:production.work.shift.record,state:"
+msgid "State"
+msgstr "Estado"
+
+msgctxt "field:production.work.shift.record,user:"
+msgid "User"
+msgstr "Usuario"
+
+msgctxt "field:production.work.shift.record,work:"
+msgid "Work"
+msgstr "Trabajo"
+
+msgctxt "field:production.work.shift.record,workplace:"
+msgid "Workplace"
+msgstr "Puesto"
+
+msgctxt "model:ir.action,name:act_shift_record"
+msgid "Shift Records"
+msgstr "Registros de turno"
+
+msgctxt "model:ir.rule.group,name:rule_group_shift_record_companies"
+msgid "User in companies"
+msgstr "Usuario en empresas"
+
+msgctxt "model:ir.ui.menu,name:menu_shift_record"
+msgid "Shift Records"
+msgstr "Registros de turno"
+
+msgctxt "model:production.work.shift.record,name:"
+msgid "Work Shift Record"
+msgstr "Registro de turno de trabajo"
+
+msgctxt "selection:production.work.shift.record,state:"
+msgid "Active"
+msgstr "Activo"
+
+msgctxt "selection:production.work.shift.record,state:"
+msgid "Finished"
+msgstr "Finalizado"
