@@ -5,3 +5,75 @@ msgstr "Content-Type: text/plain; charset=utf-8\n"
 msgctxt "field:production.work.cycle,shift:"
 msgid "Shift"
 msgstr "Torn"
+
+msgctxt "field:production.work.cycle,shift_record:"
+msgid "Shift Record"
+msgstr "Registre de torn"
+
+msgctxt "field:production.work.shift.record,company:"
+msgid "Company"
+msgstr "Empresa"
+
+msgctxt "field:production.work.shift.record,cycles:"
+msgid "Cycles"
+msgstr "Cicles"
+
+msgctxt "field:production.work.shift.record,date:"
+msgid "Date"
+msgstr "Data"
+
+msgctxt "field:production.work.shift.record,line:"
+msgid "Line"
+msgstr "Línia"
+
+msgctxt "field:production.work.shift.record,operation:"
+msgid "Operation"
+msgstr "Operació"
+
+msgctxt "field:production.work.shift.record,production:"
+msgid "Production"
+msgstr "Producció"
+
+msgctxt "field:production.work.shift.record,shift:"
+msgid "Shift"
+msgstr "Torn"
+
+msgctxt "field:production.work.shift.record,state:"
+msgid "State"
+msgstr "Estat"
+
+msgctxt "field:production.work.shift.record,user:"
+msgid "User"
+msgstr "Usuari"
+
+msgctxt "field:production.work.shift.record,work:"
+msgid "Work"
+msgstr "Treball"
+
+msgctxt "field:production.work.shift.record,workplace:"
+msgid "Workplace"
+msgstr "Lloc"
+
+msgctxt "model:ir.action,name:act_shift_record"
+msgid "Shift Records"
+msgstr "Registres de torn"
+
+msgctxt "model:ir.rule.group,name:rule_group_shift_record_companies"
+msgid "User in companies"
+msgstr "Usuari en empreses"
+
+msgctxt "model:ir.ui.menu,name:menu_shift_record"
+msgid "Shift Records"
+msgstr "Registres de torn"
+
+msgctxt "model:production.work.shift.record,name:"
+msgid "Work Shift Record"
+msgstr "Registre de torn de treball"
+
+msgctxt "selection:production.work.shift.record,state:"
+msgid "Active"
+msgstr "Actiu"
+
+msgctxt "selection:production.work.shift.record,state:"
+msgid "Finished"
+msgstr "Finalitzat"
