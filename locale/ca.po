@@ -58,6 +58,14 @@ msgctxt "model:ir.action,name:act_shift_record"
 msgid "Shift Records"
 msgstr "Registres de torn"
 
+msgctxt "model:ir.action.act_window.domain,name:act_shift_record_domain_active"
+msgid "Active"
+msgstr "Actiu"
+
+msgctxt "model:ir.action.act_window.domain,name:act_shift_record_domain_finished"
+msgid "Finished"
+msgstr "Finalitzat"
+
 msgctxt "model:ir.rule.group,name:rule_group_shift_record_companies"
 msgid "User in companies"
 msgstr "Usuari en empreses"
