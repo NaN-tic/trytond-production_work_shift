@@ -50,6 +50,11 @@ class WorkShiftRecord(ModelSQL, ModelView):
     def default_date(cls):
         return datetime.date.today()
 
+    def get_rec_name(self, name):
+        if self.user:
+            return '%s@%s' % (self.shift.name, self.user.rec_name)
+        return str(self.id)
+
 
 class WorkCycle(metaclass=PoolMeta):
     __name__ = 'production.work.cycle'
