@@ -85,3 +85,51 @@ msgstr "Actiu"
 msgctxt "selection:production.work.shift.record,state:"
 msgid "Finished"
 msgstr "Finalitzat"
+
+msgctxt "field:production.work.shift.record.create.start,company:"
+msgid "Company"
+msgstr "Empresa"
+
+msgctxt "field:production.work.shift.record.create.start,date:"
+msgid "Date"
+msgstr "Data"
+
+msgctxt "field:production.work.shift.record.create.start,line:"
+msgid "Line"
+msgstr "Línia"
+
+msgctxt "field:production.work.shift.record.create.start,operation:"
+msgid "Operation"
+msgstr "Operació"
+
+msgctxt "field:production.work.shift.record.create.start,production:"
+msgid "Production"
+msgstr "Producció"
+
+msgctxt "field:production.work.shift.record.create.start,shift:"
+msgid "Shift"
+msgstr "Torn"
+
+msgctxt "field:production.work.shift.record.create.start,user:"
+msgid "User"
+msgstr "Usuari"
+
+msgctxt "field:production.work.shift.record.create.start,work:"
+msgid "Work"
+msgstr "Treball"
+
+msgctxt "field:production.work.shift.record.create.start,workplace:"
+msgid "Workplace"
+msgstr "Lloc de treball"
+
+msgctxt "model:ir.action,name:wizard_create_shift_record"
+msgid "Create Shift Record"
+msgstr "Crear registre de torn"
+
+msgctxt "model:ir.ui.menu,name:menu_create_shift_record"
+msgid "Create Shift Record"
+msgstr "Crear registre de torn"
+
+msgctxt "model:production.work.shift.record.create.start,name:"
+msgid "Create Work Shift Record"
+msgstr "Crear registre de torn"
