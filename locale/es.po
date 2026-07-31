@@ -85,3 +85,51 @@ msgstr "Activo"
 msgctxt "selection:production.work.shift.record,state:"
 msgid "Finished"
 msgstr "Finalizado"
+
+msgctxt "field:production.work.shift.record.create.start,company:"
+msgid "Company"
+msgstr "Empresa"
+
+msgctxt "field:production.work.shift.record.create.start,date:"
+msgid "Date"
+msgstr "Fecha"
+
+msgctxt "field:production.work.shift.record.create.start,line:"
+msgid "Line"
+msgstr "Línea"
+
+msgctxt "field:production.work.shift.record.create.start,operation:"
+msgid "Operation"
+msgstr "Operación"
+
+msgctxt "field:production.work.shift.record.create.start,production:"
+msgid "Production"
+msgstr "Producción"
+
+msgctxt "field:production.work.shift.record.create.start,shift:"
+msgid "Shift"
+msgstr "Turno"
+
+msgctxt "field:production.work.shift.record.create.start,user:"
+msgid "User"
+msgstr "Usuario"
+
+msgctxt "field:production.work.shift.record.create.start,work:"
+msgid "Work"
+msgstr "Trabajo"
+
+msgctxt "field:production.work.shift.record.create.start,workplace:"
+msgid "Workplace"
+msgstr "Puesto"
+
+msgctxt "model:ir.action,name:wizard_create_shift_record"
+msgid "Create Shift Record"
+msgstr "Crear registro de turno"
+
+msgctxt "model:ir.ui.menu,name:menu_create_shift_record"
+msgid "Create Shift Record"
+msgstr "Crear registro de turno"
+
+msgctxt "model:production.work.shift.record.create.start,name:"
+msgid "Create Work Shift Record"
+msgstr "Crear registro de turno"
