@@ -11,10 +11,19 @@
             <field name="type">form</field>
             <field name="name">shift_record_form</field>
         </record>
+        <record model="ir.ui.view" id="work_shift_record_create_start_view_form">
+            <field name="model">production.work.shift.record.create.start</field>
+            <field name="type">form</field>
+            <field name="name">work_shift_record_create_start_form</field>
+        </record>
 
         <record model="ir.action.act_window" id="act_shift_record">
             <field name="name">Shift Records</field>
             <field name="res_model">production.work.shift.record</field>
+        </record>
+        <record model="ir.action.wizard" id="wizard_create_shift_record">
+            <field name="name">Create Shift Record</field>
+            <field name="wiz_name">production.work.shift.record.create</field>
         </record>
         <record model="ir.action.act_window.view" id="act_shift_record_view1">
             <field name="sequence" eval="10"/>
@@ -52,6 +61,11 @@
             action="act_shift_record"
             sequence="30"
             id="menu_shift_record"/>
+        <menuitem
+            parent="production.menu_production"
+            action="wizard_create_shift_record"
+            sequence="31"
+            id="menu_create_shift_record"/>
 
         <record model="ir.model.access" id="access_shift_record">
             <field name="model">production.work.shift.record</field>
