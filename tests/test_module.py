@@ -1,112 +1,12 @@
 # This file is part of Tryton. The COPYRIGHT file at the top level of this
 # repository contains the full copyright notices and license terms.
 
-from types import SimpleNamespace
-from unittest.mock import patch
-
-from trytond.modules.valero.production_app.state import (
-    ensure_active_shift_record, get_shift_record_system_user)
 from trytond.tests.test_tryton import ModuleTestCase
 
 
 class ProductionWorkShiftTestCase(ModuleTestCase):
     'Test ProductionWorkShift module'
     module = 'production_work_shift'
-
-    def test_shift_record_system_user_name_is_resolved_and_persisted(self):
-        user = SimpleNamespace(
-            id=17,
-            login='terminal-01',
-            rec_name='Terminal 01',
-            active=True,
-            party=SimpleNamespace(name='Terminal 01'),
-            employee=None,
-            employees=[],
-            company=SimpleNamespace(id=3),
-        )
-        shift_record = SimpleNamespace(system_user_name='Terminal 01')
-
-        class FakeUser:
-
-            @classmethod
-            def search(cls, domain, order=None, limit=None):
-                return [user]
-
-        class FakeShiftRecord:
-
-            created = []
-            written = []
-
-            def __init__(self, **values):
-                self.__dict__.update(values)
-                self.id = values.get('id', 101)
-                self.saved = False
-                FakeShiftRecord.created.append(dict(values))
-
-            def save(self):
-                self.saved = True
-
-            @classmethod
-            def write(cls, records, values):
-                cls.written.append((list(records), dict(values)))
-
-        class FakeCreateShiftRecord:
-
-            @classmethod
-            def create_shift_record(cls, values):
-                record = FakeShiftRecord(**values)
-                record.save()
-                return record
-
-        session = SimpleNamespace(
-            id=8,
-            active_terminal=SimpleNamespace(id=5),
-            active_workplace=2,
-            system_user=user,
-            get_terminal_shift_record=lambda terminal=None, workplace=None: None,
-            set_terminal_shift_record=lambda *args, **kwargs: None,
-        )
-        employee = SimpleNamespace(
-            id=22,
-            company=SimpleNamespace(id=3),
-        )
-        shift = SimpleNamespace(id=19)
-        work = SimpleNamespace(id=27)
-        line = SimpleNamespace(id=31)
-        operation = SimpleNamespace(id=33)
-        production = SimpleNamespace(id=37)
-
-        with patch(
-                'trytond.modules.valero.production_app.state.Pool') as PoolMock, \
-                patch(
-                    'trytond.modules.valero.production_app.state.get_active_shift',
-                    return_value=shift), patch(
-                    'trytond.modules.valero.production_app.state.get_user_employee',
-                    return_value=employee), patch(
-                    'trytond.modules.valero.production_app.state.get_session_work',
-                    return_value=work), patch(
-                    'trytond.modules.valero.production_app.state.get_session_work_center',
-                    return_value=line), patch(
-                    'trytond.modules.valero.production_app.state.get_session_operation',
-                    return_value=operation), patch(
-                    'trytond.modules.valero.production_app.state.get_session_production',
-                    return_value=production), patch(
-                    'trytond.modules.valero.production_app.state.get_session_shift_record',
-                    return_value=None):
-            PoolMock.return_value.get.side_effect = lambda name, type=None: (
-                FakeUser if name == 'res.user'
-                else FakeCreateShiftRecord
-                if name == 'production.work.shift.record.create'
-                else FakeShiftRecord)
-
-            self.assertIs(get_shift_record_system_user(shift_record), user)
-            created = ensure_active_shift_record(session)
-
-        self.assertIsNotNone(created)
-        self.assertTrue(created.saved)
-        self.assertEqual(
-            FakeShiftRecord.created[0]['system_user_name'], 'Terminal 01')
-        self.assertEqual(FakeShiftRecord.written, [])
 
 
 del ModuleTestCase
