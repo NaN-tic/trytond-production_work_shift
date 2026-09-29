@@ -18,9 +18,9 @@ class WorkShiftRecord(ModelSQL, ModelView):
     company = fields.Many2One('company.company', 'Company', required=True)
     work = fields.Many2One(
         'production.work', 'Work', ondelete='CASCADE',
-        readonly=True)
+        states={'editable': False})
     production = fields.Many2One(
-        'production', 'Production', readonly=True)
+        'production', 'Production', states={'editable': False})
     workplace = fields.Integer('Workplace', required=True, readonly=True)
     date = fields.Date('Date', required=True, readonly=True)
     shift = fields.Many2One(
@@ -30,7 +30,7 @@ class WorkShiftRecord(ModelSQL, ModelView):
         'production.work.center', 'Line', required=False, readonly=True)
     operation = fields.Many2One(
         'production.routing.operation', 'Operation',
-        readonly=True)
+        states={'editable': False})
     cycles = fields.One2Many(
         'production.work.cycle', 'shift_record', 'Cycles',
         readonly=True)
