@@ -67,6 +67,12 @@
             sequence="31"
             id="menu_create_shift_record"/>
 
+        <record model="ir.model.button" id="shift_record_finish_button">
+            <field name="model">production.work.shift.record</field>
+            <field name="name">finish</field>
+            <field name="string">Finish Shift</field>
+        </record>
+
         <record model="ir.model.access" id="access_shift_record">
             <field name="model">production.work.shift.record</field>
             <field name="perm_read" eval="True"/>
