@@ -40,6 +40,23 @@ class WorkShiftRecord(ModelSQL, ModelView):
             ], 'State', required=True, readonly=True, sort=False)
 
     @classmethod
+    def __setup__(cls):
+        super().__setup__()
+        cls._buttons.update({
+                'finish': {
+                    'invisible': Eval('state') != 'active',
+                    'depends': ['state'],
+                    },
+                })
+
+    @classmethod
+    @ModelView.button
+    def finish(cls, records):
+        records = [r for r in records if r.state == 'active']
+        if records:
+            cls.write(records, {'state': 'finished'})
+
+    @classmethod
     def default_company(cls):
         return Transaction().context.get('company')
 
