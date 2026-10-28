@@ -10,6 +10,10 @@ msgctxt "field:production.work.cycle,shift_record:"
 msgid "Shift Record"
 msgstr "Registre de torn"
 
+msgctxt "model:ir.model.button,string:shift_record_finish_button"
+msgid "Finish Shift"
+msgstr "Finalitzar torn"
+
 msgctxt "field:production.work.shift.record,company:"
 msgid "Company"
 msgstr "Empresa"

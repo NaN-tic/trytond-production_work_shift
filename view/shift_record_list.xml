@@ -9,4 +9,5 @@
     <field name="line"/>
     <field name="operation"/>
     <field name="state"/>
+    <button name="finish"/>
 </tree>
