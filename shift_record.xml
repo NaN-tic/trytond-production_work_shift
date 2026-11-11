@@ -101,4 +101,10 @@
             <field name="rule_group" ref="rule_group_shift_record_companies"/>
         </record>
     </data>
+    <data>
+        <record model="ir.action-res.group" id="create_shift_record_group_production">
+            <field name="action" ref="wizard_create_shift_record"/>
+            <field name="group" ref="production.group_production"/>
+        </record>
+    </data>
 </tryton>
